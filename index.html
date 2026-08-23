@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angus Games Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Fast RGB neon background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(
+        120deg,
+        #ff00ff,
+        #00ffff,
+        #00ff00,
+        #ffff00,
+        #ff8800,
+        #ff0000,
+        #8800ff,
+        #00ffff
+      );
+      background-size: 1000% 1000%;
+      animation: fastNeon 10s linear infinite;
+      z-index: -1;
+      opacity: 0.5;
+      filter: blur(50px);
+    }
+
+    @keyframes fastNeon {
+      0%   { background-position: 0% 50%; }
+      25%  { background-position: 50% 0%; }
+      50%  { background-position: 100% 50%; }
+      75%  { background-position: 50% 100%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Logo */
+    .logo {
+      text-align: center;
+      padding: 30px;
+      font-size: 48px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      color: #0ff;
+      text-shadow: 0 0 15px #0ff, 0 0 30px #0af;
+    }
+
+    /* Grid */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    /* Game card */
+    .game {
+      background: rgba(5, 5, 5, 0.85);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      border: 2px solid #0af;
+      box-shadow: 0 0 15px #0af;
+      transition: 0.25s;
+    }
+
+    .game:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #0ff, 0 0 40px #0af;
+      border-color: #0ff;
+    }
+
+    /* Emoji thumbnail */
+    .thumb {
+      font-size: 70px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #0af;
+    }
+
+    .game h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .game p {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    /* Play button */
+    a {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #0af;
+      color: black;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #0af;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      background: #0ff;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      font-size: 14px;
+      border-top: 2px solid #0af;
+      box-shadow: 0 -5px 15px #0af;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="logo">ANGUS GAMES</div>
+
+<div class="container">
+
+  <div class="game">
+    <div class="thumb">🏎️</div>
+    <h2>Poly Track</h2>
+    <p>Low-poly racing game with smooth controls.</p>
+    <a href="https://angusa13.github.io/poly-track/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">✈️</div>
+    <h2>Neon Plane Doger</h2>
+    <p>Dodge obstacles and survive in neon skies.</p>
+    <a href="https://angusa13.github.io/neon-plane-doger/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🚗</div>
+    <h2>Escape Road</h2>
+    <p>Race forward and avoid obstacles to escape.</p>
+    <a href="https://angusa13.github.io/escape-road/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🏍️</div>
+    <h2>Dirt Bike Game</h2>
+    <p>Ride fast, jump high, and master the dirt track.</p>
+    <a href="https://angusa13.github.io/dirt-bike-game/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🎵</div>
+    <h2>Geometry Dash Lite</h2>
+    <p>Jump, dodge, and survive rhythm-based levels.</p>
+    <a href="https://angusa13.github.io/geometry-dash-lite/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🛩️</div>
+    <h2>Pixel Flight Sim</h2>
+    <p>Pixel plane game — fly along the river and land at airports.</p>
+    <a href="https://angusa13.github.io/pixel-flight-sim-upgraded-phisics/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🧱</div>
+    <h2>Pixelcraft v8.6</h2>
+    <p>Your voxel engine with terrain, mobs, and upgrades.</p>
+    <a href="https://angusa13.github.io/Pixelcraft-v8.6/">Play</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Angus — Gaming Hub powered by GitHub Pages
+</footer>
+
+<!-- Hover sound effects -->
+<audio id="hoverSound" src="hover.mp3"></audio>
+<audio id="clickSound" src="click.mp3"></audio>
+
+<script>
+  const hoverSound = document.getElementById("hoverSound");
+  const clickSound = document.getElementById("clickSound");
+
+  document.querySelectorAll(".game").forEach(card => {
+    card.addEventListener("mouseenter", () => hoverSound.play());
+  });
+
+  document.querySelectorAll("a").forEach(btn => {
+    btn.addEventListener("click", () => clickSound.play());
+  });
+</script>
+
+</body>
+</html>
