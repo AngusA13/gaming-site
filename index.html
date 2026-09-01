@@ -12,7 +12,6 @@
       overflow-x: hidden;
     }
 
-    /* Fast RGB neon background */
     body::before {
       content: "";
       position: fixed;
@@ -44,7 +43,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Logo */
     .logo {
       text-align: center;
       padding: 30px;
@@ -55,7 +53,6 @@
       text-shadow: 0 0 15px #0ff, 0 0 30px #0af;
     }
 
-    /* Grid */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -65,7 +62,6 @@
       margin: auto;
     }
 
-    /* Game card */
     .game {
       background: rgba(5, 5, 5, 0.85);
       padding: 20px;
@@ -82,7 +78,6 @@
       border-color: #0ff;
     }
 
-    /* Emoji thumbnail */
     .thumb {
       font-size: 70px;
       margin-bottom: 15px;
@@ -102,7 +97,6 @@
       margin-bottom: 20px;
     }
 
-    /* Play button */
     a {
       display: inline-block;
       padding: 12px 20px;
@@ -236,13 +230,26 @@
     <a href="https://angusa13.github.io/Eaglercraft-1.12/">Play</a>
   </div>
 
+  <div class="game">
+    <div class="thumb">⛷️</div>
+    <h2>Snow Rider 3D</h2>
+    <p>Race downhill, dodge obstacles, and collect gifts in snowy speed.</p>
+    <a href="https://angusa13.github.io/snow-rider-3d/">Play</a>
+  </div>
+
+  <div class="game">
+    <div class="thumb">🌑</div>
+    <h2>Eaglercraft 1.19 Eclipse</h2>
+    <p>Modern Minecraft 1.19 experience in your browser.</p>
+    <a href="https://angusa13.github.io/eagelercraft-1.19/mc/eclipse/">Play</a>
+  </div>
+
 </div>
 
 <footer>
   © 2026 Angus — Gaming Hub powered by GitHub Pages
 </footer>
 
-<!-- Hover sound effects -->
 <audio id="hoverSound" src="hover.mp3"></audio>
 <audio id="clickSound" src="click.mp3"></audio>
 
